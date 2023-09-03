@@ -1,0 +1,238 @@
+*{
+    margin: 0%;
+    padding: auto;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    background: black;
+    color: black;
+}
+#prog
+{
+    color: aliceblue;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/background\ stil.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position:center ;
+
+}
+.container{
+    padding: 10px 10% ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+        display: inline-block ;
+        list-style: none;
+        margin: 10px 20px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+
+}
+nav ul li a::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e61010;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+.logo{
+    
+    width: 70px;
+    border-radius: 50%;
+}
+.headertxt{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.headertxt h1{
+    color: aliceblue;
+    font-size: 60px;
+    margin-top: 20px;
+}
+.headertxt h1 span{
+    color: #e61010;
+}
+
+/* -------------------about------------------------ */
+#about
+{
+    padding: 80px;
+    color: rgb(255, 255, 255);
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-c1{
+    flex-basis: 35%;
+}
+.about-c1 img{
+    width: 100%;
+    border-radius:15px;
+
+}
+.about-c2{
+    flex-basis: 60%;
+}
+.subText{
+    font-size: 60px;
+    font-weight: 600;
+    color: aliceblue;
+}
+.tab-titels{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tablinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tablinks::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #e61010;
+    position: absolute;
+    left: 0;
+    bottom:  -8px;
+    transition: 0.5s;
+}
+.tablinks.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+color: rgb(43, 243, 243);
+font-size: 14px;
+
+}
+.tab-contents{
+display: none;
+}
+.tab-contents.active-tab{
+display:block;
+
+}
+/* ------------servises--------------- */
+#survises{
+    padding: 30px 0;
+}
+.survises-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.survises-list div{
+    background: rgb(96, 96, 96);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s ;
+}
+.survises-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.survises-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.survises-list div a{
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.survises-list div:hover{
+    background: #2757c0;
+    transform: translateY(-10px);
+}
+------------------contact-----------------
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 65%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+}
+.socalicon{
+    margin-top: 30px;
+}
+.socalicon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #e61010;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.socalicon a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+#contactid{
+    color: aliceblue;
+}
+/* .footer-nav li {
+    display: inline;
+    
+} */
+.tab-contents.active-tab{
+    float: left;
+    background: rgb(96, 96, 96);
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.footer-nav li span{
+    float: left;
+    padding-left: 2px;
+    
+}
+ /* .footer-nav.languages li span{
+    float: left;
+    padding-left: 35px;
+    
+}  */
