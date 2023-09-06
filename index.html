@@ -179,7 +179,7 @@
                         <input type="text" name="Name" placeholder="name" required>
                         <input type="text" name="Email" placeholder="email" required>
                         <textarea name="Massage" id="" cols="" rows="6" placeholder="massage"></textarea>
-                        <button type="submit" class="btn btn2"  id="submitForm">submit</button>
+                        <button type="submit" class="btn btn2"  id="submitForm" onclick="Success()">submit</button>
                     </form>
                 </div>
             </div>
@@ -188,11 +188,13 @@
 
 
 
-  <script>
-    $("#submitForm").click(function() {
-        alert("The Form has been Submitted.");
-     });
-  </script>
+<script>
+        function Success()
+        {
+            alert("Success fully submited");
+        }
+
+</script>
     <script>
         var tablinks = document.getElementsByClassName("tablinks");
         var tabcontents = document.getElementsByClassName("tab-contents"); 
