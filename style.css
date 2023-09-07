@@ -90,10 +90,14 @@ nav ul li a:hover::after{
 }
 .about-c1{
     flex-basis: 35%;
+    padding-top: 70px;
+    
+    
 }
 .about-c1 img{
     width: 100%;
     border-radius:15px;
+    
 
 }
 .about-c2{
@@ -186,6 +190,8 @@ display:block;
     background: #dd2b2b;
     transform: translateY(-10px);
 }
+
+
 /* ------------------contact----------------- */
 .btn.btn2{
     background-color: #21a01d; /* Green */
@@ -226,13 +232,13 @@ form input,form textarea{
     margin-right: 15px;
 }
 .socalicon{
-    margin-top: 30px;
+    margin-top: 35px;
 }
 .socalicon a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 50px;
     margin-right: 15px;
-    color: #793232;
+    color: #7e2222;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -249,13 +255,13 @@ form input,form textarea{
 } */
 .tab-contents.active-tab{
     float: left;
-    background: rgb(96, 96, 96);
+    /* background: rgb(118, 118, 118); */
     font-size: 13px;
     border-radius: 10px;
     padding: 10px;
     width: 500px;
     height: 310px;
-    border: 1px solid rgb(249, 249, 252);
+    /* border: 1px solid rgb(249, 249, 252); */
     
     
 }
@@ -290,3 +296,41 @@ html{
     }
 }
 /* new update */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 5px; /* Add top padding */
+  padding-bottom: 1px; /* Add bottom padding */
+  color: rgb(0, 205, 202); /* White text color */
+}
+
+
+.java {width: 90%; background-color: #0fc72e;} /* Green */
+.ccpp {width: 80%; background-color: #2196F3;} /* Blue */
+.htmlcss{width: 70%; background-color: #fce406;} /* Red */
+.python {width: 60%; background-color: #0047fc;} /* Dark Grey */
+.php {width: 30%; background-color: #808080;} /* Dark Grey */
+/* --------------------column ------------------ */
+.column {
+    float: left;
+    width: 60.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #educationdetails{
+    padding: 19px;
+    font-size: 17px;
+  }
+.column span{
+    color:rgb(5, 221, 210);;
+}
