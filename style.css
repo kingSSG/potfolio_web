@@ -231,7 +231,7 @@ form input,form textarea{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #980634;
+    color: #df2d2d;
     margin-right: 15px;
 }
 .socalicon{
@@ -241,7 +241,7 @@ form input,form textarea{
     text-decoration: none;
     font-size: 50px;
     margin-right: 15px;
-    color: #7e2222;
+    color: #c41c1c;
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -336,4 +336,10 @@ html{
 }
 .column span{
     color:rgb(5, 221, 210);;
+}
+/* --------------------------------- submit ---------------- */
+#submitForm{
+    text-decoration: none;
+    color: white;
+    
 }
