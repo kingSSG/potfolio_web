@@ -43,72 +43,16 @@
                 
                 
                 <div class="tab-titels">
-                        <p class="tablinks active-link" onclick="op('skills')">Skils</p>
-                        <p class="tablinks" onclick="op('experince')">Experience</p>
+                        <p class="tablinks active-link" onclick="op('skills')">Experience</p>
+                        <p class="tablinks" onclick="op('experince')">Skills</p>
                         <p class="tablinks" onclick="op('education')">Education</p>
                 </div>
-                <div class="div1">
-                    <div class="tab-contents active-tab" id="skills">
-                        
-                            
-
-                            
-                            
-                            
-                <!-- ------------------------------------------------ -->
-                    <div class="progressbody">
-                    <div class="containerprogress">
-                                <div class="skill-box">
-                                    <span class="title">HTML</span>
-                        
-                                    <div class="skill-bar">
-                                        <span class="skill-per html">
-                                            <span class="tooltip">90%</span>
-                                        </span>
-                                    </div>
-                                </div>
-                        
-                                <div class="skill-box">
-                                    <span class="title">CSS</span>
-                        
-                                    <div class="skill-bar">
-                                        <span class="skill-per css">
-                                            <span class="tooltip">70%</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="skill-box">
-                                    <span class="title">JavaScript</span>
-                        
-                                    <div class="skill-bar">
-                                        <span class="skill-per javascript">
-                                            <span class="tooltip">50%</span>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="skill-box">
-                                    <span class="title">NodeJS</span>
-                        
-                                    <div class="skill-bar">
-                                        <span class="skill-per nodejs">
-                                            <span class="tooltip">30%</span>
-                                        </span>
-                                    </div>
-                                </div>
-                    </div>
-                </div>
-                
-
-                            
-                            Tools:
-                            vs code , Sql,pycharm
-                            Frame work:
-                            Laravel
-                    </div>
-                </div>
-
-                    <div class="tab-contents" id="experince">
+            <div class="div1">
+                <div class="tab-contents active-tab" id="skills">
+    
+                        <!-- ------------------------------------------------ -->
                         <ul class="footer-nav">
+                        
                             <li> <span>Internship under NIC | Jalpaigur</span> 
                                 <p> <br>
                                     During my internship at NIC (National Informatics Centre), I had the
@@ -124,7 +68,7 @@
                                     my subject understanding and gain valuable work experience.
                                     This role provided me with the opportunity to develop my
                                     teaching skills and deepen my knowledge in my area of expertise.
-
+                        
                                 </p> <br>
                             </li>
                             <li> <span>FREELANCING</span> 
@@ -136,6 +80,91 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                    <div class="tab-contents" id="experince">
+                        <!-- ----------------------------------------------------- -->
+                        <div class="rowskill">
+                            <div class="columnskill left">
+
+                                <div class="progressbody">
+                                    <div class="containerprogress">
+                                        <div class="skill-box">
+                                                    <span class="title">JAVA</span>
+                                        
+                                                    <div class="skill-bar">
+                                                        <span class="skill-per JAVA">
+                                                            <span class="tooltip">90%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                        
+                                                <div class="skill-box">
+                                                    <span class="title">C/C++</span>
+                                        
+                                                    <div class="skill-bar">
+                                                        <span class="skill-per Ccpp">
+                                                            <span class="tooltip">70%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-box">
+                                                    <span class="title">HTML /CSS / JavaScript</span>
+                                        
+                                                    <div class="skill-bar">
+                                                        <span class="skill-per htmlcssjavascript">
+                                                            <span class="tooltip">50%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="skill-box">
+                                                    <span class="title">Python</span>
+                                        
+                                                    <div class="skill-bar">
+                                                        <span class="skill-per Python">
+                                                            <span class="tooltip">65%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-box">
+                                                    <span class="title">PHP</span>
+                                        
+                                                    <div class="skill-bar">
+                                                        <span class="skill-per php">
+                                                            <span class="tooltip">30%</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                    
+        
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="columnskill right">
+
+                                <!-- -------------------------crcular---------------------------- -->
+                                <div class="cerclebody">
+                                    <div class="cerclecontainer">
+                                        <div class="circular-progress">
+                                            <span class="progress-value">0%</span>
+                                        </div>
+                            
+                                        <span class="text">Git</span>
+                                    </div>
+                                </div>
+                                
+
+                            <!-- ------------------------------------cercle end------------------------------ -->
+
+                            </div>
+                        </div>
+                        
+
+                        
+                    </div>
+                    <!-- ________________________________________education ------------------------- -->
                     <div class="tab-contents" id="education">
                         <ul class="footer-nav">
                             <div class="row" id="educationdetails">
@@ -224,51 +253,83 @@
 
 
 
-<script>
-        function Success()
-        {
-            alert("Success fully submited");
+
+    <!-- JavaScript -->
+    <script >
+        function activecircle()
+        {      
+                let circularProgress = document.querySelector(".circular-progress"),
+                progressValue = document.querySelector(".progress-value");
+            
+                let progressStartValue = 0,    
+                progressEndValue = 90,    
+                speed = 10;
+                
+                let progress = setInterval(() => {
+                progressStartValue++;
+            
+                progressValue.textContent = `${progressStartValue}%`
+                circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+            
+                if(progressStartValue == progressEndValue){
+                    clearInterval(progress);
+                }    
+            }, speed);
+
         }
 
-</script>
-    <script>
-        var tablinks = document.getElementsByClassName("tablinks");
-        var tabcontents = document.getElementsByClassName("tab-contents"); 
-        function op(tabname)
-        {  
-            //alert("I am an alert box!");
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-            
-        }
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzoH_4fykQh33Pr25A1mNvUQwTfVQddAqrkmOhT-Ea9lbei2Gg2QKhOMdfzisQLy_o/exec'
-        const form = document.forms['submit-to-google-sheet']
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log( Success()))
-            .catch(error => console.error('Error!', error.message))
-        })
-        
-    </script>
-    <!-- --------------------------------------------------------- -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const progressBars = document.querySelectorAll(".progress");
     
-            progressBars.forEach((bar) => {
-                const width = bar.getAttribute("data-width");
-                bar.style.width = `${width}%`;
-            });
+<script>
+    function Success()
+    {
+        alert("Success fully submited");
+    }
+
+</script>
+<script>
+    var tablinks = document.getElementsByClassName("tablinks");
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+    function op(tabname)
+    {  
+        //alert("I am an alert box!");
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+        if( tabname =='experince')
+        {
+            return activecircle()
+        }
+        
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzoH_4fykQh33Pr25A1mNvUQwTfVQddAqrkmOhT-Ea9lbei2Gg2QKhOMdfzisQLy_o/exec'
+    const form = document.forms['submit-to-google-sheet']
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log( Success()))
+        .catch(error => console.error('Error!', error.message))
+    })
+    
+</script>
+<!-- --------------------------------------------------------- -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress");
+
+        progressBars.forEach((bar) => {
+            const width = bar.getAttribute("data-width");
+            bar.style.width = `${width}%`;
         });
-    </script>
+    });
+</script>
+    
 </body>
 </html>

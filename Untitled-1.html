@@ -1,56 +1,40 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!----======== CSS ======== -->
-    <link rel="stylesheet" href="/Untitled-2.css">
-    
-   <title>Animated Skills Bar</title>
-</head>
-<body>
-    <div class="container">
-        <div class="skill-box">
-            <span class="title">HTML</span>
+    <html>
+    <head>
 
-            <div class="skill-bar">
-                <span class="skill-per html">
-                    <span class="tooltip">90%</span>
-                </span>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/Untitled-2.css">
+                                        
+    </head>
+    <body>
+        <div class="container">
+            <div class="circular-progress">
+                <span class="progress-value">0%</span>
             </div>
+
+            <span class="text">HTML & CSS</span>
         </div>
 
-        <div class="skill-box">
-            <span class="title">CSS</span>
-
-            <div class="skill-bar">
-                <span class="skill-per css">
-                    <span class="tooltip">70%</span>
-                </span>
-            </div>
-        </div>
-        <div class="skill-box">
-            <span class="title">JavaScript</span>
-
-            <div class="skill-bar">
-                <span class="skill-per javascript">
-                    <span class="tooltip">50%</span>
-                </span>
-            </div>
-        </div>
-        <div class="skill-box">
-            <span class="title">NodeJS</span>
-
-            <div class="skill-bar">
-                <span class="skill-per nodejs">
-                    <span class="tooltip">30%</span>
-                </span>
-            </div>
-        </div>
-    </div>
-    
-</body>
+        <!-- JavaScript -->
+        <script >
+            let circularProgress = document.querySelector(".circular-progress"),
+            progressValue = document.querySelector(".progress-value");
+        
+            let progressStartValue = 0,    
+            progressEndValue = 90,    
+            speed = 10;
+            
+            let progress = setInterval(() => {
+            progressStartValue++;
+        
+            progressValue.textContent = `${progressStartValue}%`
+            circularProgress.style.background = `conic-gradient(#7d2ae8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+        
+            if(progressStartValue == progressEndValue){
+                clearInterval(progress);
+            }    
+        }, speed);
+        </script>
+    </body>
 </html>
