@@ -47,32 +47,59 @@
                         <p class="tablinks" onclick="op('experince')">Experience</p>
                         <p class="tablinks" onclick="op('education')">Education</p>
                 </div>
-
                 <div class="div1">
                     <div class="tab-contents active-tab" id="skills">
-                            <p>JAVA</p>
-                            <div class="container">
-                            <div class="skills java"></div>
-                            </div>
-                            <p>C/C++</p>
-                            <div class="container">
-                            <div class="skills ccpp"></div>
-                            </div>
+                        
+                            
 
-                            <p>HTML / CSS</p>
-                            <div class="container">
-                            <div class="skills htmlcss"></div>
-                            </div>
+                            
+                            
+                            
+                <!-- ------------------------------------------------ -->
+                    <div class="progressbody">
+                    <div class="containerprogress">
+                                <div class="skill-box">
+                                    <span class="title">HTML</span>
+                        
+                                    <div class="skill-bar">
+                                        <span class="skill-per html">
+                                            <span class="tooltip">90%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                        
+                                <div class="skill-box">
+                                    <span class="title">CSS</span>
+                        
+                                    <div class="skill-bar">
+                                        <span class="skill-per css">
+                                            <span class="tooltip">70%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="skill-box">
+                                    <span class="title">JavaScript</span>
+                        
+                                    <div class="skill-bar">
+                                        <span class="skill-per javascript">
+                                            <span class="tooltip">50%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="skill-box">
+                                    <span class="title">NodeJS</span>
+                        
+                                    <div class="skill-bar">
+                                        <span class="skill-per nodejs">
+                                            <span class="tooltip">30%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                
 
-                            <p>Python</p>
-                            <div class="container">
-                            <div class="skills python"></div>
-                            </div>
-
-                            <p>PHP</p>
-                            <div class="container">
-                            <div class="skills php"></div>
-                            </div>
+                            
                             Tools:
                             vs code , Sql,pycharm
                             Frame work:
@@ -231,6 +258,17 @@
             .catch(error => console.error('Error!', error.message))
         })
         
-      </script>
+    </script>
+    <!-- --------------------------------------------------------- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressBars = document.querySelectorAll(".progress");
+    
+            progressBars.forEach((bar) => {
+                const width = bar.getAttribute("data-width");
+                bar.style.width = `${width}%`;
+            });
+        });
+    </script>
 </body>
 </html>
