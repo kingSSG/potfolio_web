@@ -80,6 +80,18 @@ nav ul li a:hover::after{
 }
 
 /* -------------------about------------------------ */
+#githubbutton
+{   
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+    padding-left: 100px;
+
+}
+#githubicon
+{
+    font-size: 40px;
+}
 #about
 {
     padding: 80px;
@@ -194,14 +206,14 @@ display:block;
     display: inline-block;
 }
 .survises-list div:hover{
-    background: #dd2b2b;
+    background: #df3b3bb6;
     transform: translateY(-10px);
 }
 
 
 /* ------------------contact----------------- */
 .btn.btn2{
-    background-color: #21a01d; /* Green */
+    background-color: #3aa70f; /* Green */
     border: none;
     color: white;
     padding: 10px 32px;
@@ -315,13 +327,24 @@ html{
     display: table;
     clear: both;
 }
-
+#experince
+{
+    
+    padding-top: 40px;
+    padding-left: 1px;
+}
+#education
+{   
+    padding-top: 0px;
+    
+}
 #educationdetails{
+    
     padding: 19px;
     font-size: 17px;
 }
 .column span{
-    padding-top: 1px;
+    
     padding-bottom: 10px;
     color:rgb(5, 221, 210);
     font-size: 20px;
