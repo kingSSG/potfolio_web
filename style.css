@@ -570,7 +570,7 @@ nav .fa-solid{
     }
     nav .fa-solid{
         display: block;
-        font-size: 25px;
+        font-size: 35px;
 
     }
     nav ul {
@@ -670,5 +670,13 @@ nav .fa-solid{
     #educationdetails {
         padding: 0px;
         font-size: 16px;
+    }
+    .fa-solid.fa-bars{
+            padding-left: 600px;
+            padding-top: 1px;
+    }
+    .logo {
+        width: 107px;
+        border-radius: 50%;
     }
 }
