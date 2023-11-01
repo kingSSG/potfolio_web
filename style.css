@@ -557,13 +557,14 @@ html{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 500px){
     #header{
         background-image: url(/img/phoneback.png) ;
     }
     .headertxt{
         margin-top: 100%;
-        font-size: 16px;
+        font-size: 21px;
+        margin-top: 52px;
     }
     .headertxt h1{
         font-size: 30px;
@@ -616,8 +617,8 @@ nav .fa-solid{
         margin-right: 20px;
      }
      #phontext{
-        font-size: 15px;
-        margin-right: 100px;
+        font-size: 17px;
+        margin-right: 27px;
      }
     
      #about {
@@ -676,7 +677,7 @@ nav .fa-solid{
             padding-top: 1px;
     }
     .logo {
-        width: 107px;
+        width: 117px;
         border-radius: 50%;
     }
 }
