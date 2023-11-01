@@ -579,7 +579,7 @@ nav .fa-solid{
         top: 0;
         right: -200px;  /*because width is 200 so it willhide  */
         width: 200px;
-        height: 100vh;
+        height: 80vh;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
@@ -616,8 +616,8 @@ nav .fa-solid{
         margin-right: 20px;
      }
      #phontext{
-        font-size: 10px;
-        margin-right: 200px;
+        font-size: 15px;
+        margin-right: 100px;
      }
     
      #about {
@@ -651,4 +651,24 @@ nav .fa-solid{
         padding: 0px 18px;
         border-radius: 11px;
       }
+      .container {
+        padding: 68px 10%;
+    }
+    .cerclebody {
+        height: 55%;
+        padding-left: 31px;
+        padding-top: 1px;
+        display: flex;
+        background: #000000;
+    }
+    #githubbutton {
+        margin: auto;
+        width: 50%;
+        padding-top: 10px;
+        padding-left: 21px;
+    }
+    #educationdetails {
+        padding: 0px;
+        font-size: 16px;
+    }
 }
