@@ -557,7 +557,7 @@ html{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 550px){
     #header{
         background-image: url(/img/phoneback.png) ;
     }
