@@ -557,7 +557,7 @@ html{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 500px){
     #header{
         background-image: url(/img/phoneback.png) ;
     }
@@ -571,7 +571,7 @@ nav .fa-solid{
     }
     nav .fa-solid{
         display: block;
-        font-size: 35px;
+        font-size: 50px;
 
     }
     nav ul {
@@ -673,11 +673,19 @@ nav .fa-solid{
         font-size: 16px;
     }
     .fa-solid.fa-bars{
-            padding-left: 600px;
+            padding-left: 445px;
             padding-top: 1px;
     }
     .logo {
         width: 117px;
         border-radius: 50%;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+
+    }
+    #helloworld{
+        width: 80%;
+        
     }
 }
