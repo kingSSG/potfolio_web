@@ -14,12 +14,14 @@
         <div class="container">
             <nav>
                 <img src="img/ssglogo.gif"  class="logo">
-                <ul>
+                <ul id="sidemenue">
                     <li><a href="">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#survises">Servises</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-terminal" style="color: #ffffff;" onclick="closemenue()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" style="color: #ffffff;"  onclick="openmenue()"></i>
             </nav>
             <div class="headertxt">
                 <p id="prog" >Programmer</p>
@@ -35,14 +37,14 @@
         <div class="container">
             <div class="row">
                 <div class="about-c1">
-                    <img src="img/pp.jpg" >
+                    <img class="about-img"src="img/pp.jpg" >
                 </div>
                 <div class="about-c2">
                     <h1 class="subText">About me</h1>
                     <br>
-                    <p> Hi Suvojit Sengupta!, A passionate computer science student ,Coding is my compass and learning is my North star , I'm all about learning and digging into the world of computer science—it's like an exciting adventure that never ends! </p>
+                    <p id="phontext"> Hi Suvojit Sengupta!, A passionate computer science student ,Coding is my compass and learning is my North star , I'm all about learning and digging into the world of computer science—it's like an exciting adventure that never ends! </p>
                     <br>
-                    <button class="btn btn2" style="position: relative; left: 68%; "><a href="img/suvojit sengupta cv.pdf" id="submitForm">Dwonload CV</a></button>
+                    <button class="btn btn2" id="cvbutton"><a href="img/suvojit sengupta cv.pdf" id="submitForm">Dwonload CV</a></button>
                 
                 <div class="tab-titels">
                         <p class="tablinks active-link" onclick="op('skills')">Experience</p>
@@ -333,6 +335,15 @@
             bar.style.width = `${width}%`;
         });
     });
+</script>
+<script>
+    var sidemenue = document.getElementById("sidemenue");
+    function openmenue(){
+        sidemenue.style.right="0";
+    }
+    function closemenue(){
+        sidemenue.style.right="-200px";
+    }
 </script>
     
 </body>
