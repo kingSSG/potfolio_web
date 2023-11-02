@@ -550,10 +550,10 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
        
-        background-image: none; 
-        background-color: rgb(78, 78, 91);
-        height: 944px;
-        width: 576px;
+        background-image: url(/img/pp.jpg); 
+        
+        height: 1044px;
+        width: 586px;
     }
     .headertxt{
         margin-top: 100%;
@@ -717,5 +717,8 @@ nav .fa-solid{
     }
     #survisedo{
         font-size: 18px;
+    }
+    #gamiladd{
+        margin-left: 1px;
     }
 }
