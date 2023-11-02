@@ -309,7 +309,7 @@ html{
     #header{
        
         background-image: url(img/background\ stil\ phone.jpg);
-        width: 100%;
+        width: 200px;
         height: 100vh;
     
     }
@@ -562,7 +562,7 @@ nav .fa-solid{
        
         background-image: url(/img/phoneback.jpg);
         height: 944px;
-        width: 564px;
+        width: 576px;
     }
     .headertxt{
         margin-top: 100%;
