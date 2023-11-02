@@ -489,9 +489,9 @@ html{
 #skills{
     padding-top: 1px;
     font-size: 15px;
-    font-family:'Courier New', Courier, monospace
-    padding-left: 30px
-    
+    font-family:'Courier New', Courier, monospace;
+    padding-left: 30px ;
+
     
 }
 
@@ -551,13 +551,13 @@ html{
     color: #606060;
 }
 
-/* --------------------------------------cercle */
+/* --------------------------------------cercle----------------------------------- */
 
 /* --------------------------phone screen------------------------------- */
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     #header{
         background-image: url(/img/phoneback.png) ;
     }
@@ -571,16 +571,16 @@ nav .fa-solid{
     }
     nav .fa-solid{
         display: block;
-        font-size: 50px;
+        font-size: 38px;
 
     }
     nav ul {
         background: #222020;
         position: fixed;
         top: 0;
-        right: -200px;  /*because width is 200 so it willhide  */
-        width: 200px;
-        height: 80vh;
+        right: -351px;  /*because width is 200 so it willhide  */
+        width: 351px;
+        height: 48vh;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
@@ -657,7 +657,7 @@ nav .fa-solid{
     }
     .cerclebody {
         height: 55%;
-        padding-left: 31px;
+        padding-left: 5px;
         padding-top: 1px;
         display: flex;
         background: #000000;
@@ -666,14 +666,14 @@ nav .fa-solid{
         margin: auto;
         width: 50%;
         padding-top: 10px;
-        padding-left: 21px;
+        padding-left: 0px;
     }
     #educationdetails {
         padding: 0px;
         font-size: 16px;
     }
     .fa-solid.fa-bars{
-            padding-left: 445px;
+            padding-left: 261px;
             padding-top: 1px;
     }
     .logo {
