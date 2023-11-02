@@ -635,15 +635,15 @@ nav .fa-solid{
         font-size: 5px;
      }
      .footer-nav li p{
-        font-size: 12px;
-        margin-right: 200px;
+        font-size: 14px;
+        margin-right: 2px;
         margin-top: 1px;
         margin-bottom: 1%;
      }
      .tab-contents ul li span {
         color: rgb(5, 221, 210);
-        font-weight: 500;
-        font-size: 12px;
+        font-weight: 400;
+        font-size: 14px;
       }
       .containerprogress {
         position: relative;
@@ -655,7 +655,7 @@ nav .fa-solid{
         border-radius: 11px;
       }
       .container {
-        padding: 68px 10%;
+        padding: 40px 10%;
     }
     .cerclebody {
         height: 55%;
@@ -696,7 +696,7 @@ nav .fa-solid{
         padding-right: 101px;
     }
     #survises{
-        padding-left: 48px;
+        padding-left: 20px;
     }
     .socalicon {
         margin-top: 32px;
@@ -711,7 +711,7 @@ nav .fa-solid{
     .survises-list div {
         background: rgb(96, 96, 96);
         height: 400px;
-        width: 350px;
+        width: 440px;
         padding: 60px;
         font-size: 13px;
         font-weight: 300;
@@ -720,5 +720,8 @@ nav .fa-solid{
     }
     #contacth1{
         font-size: 50px;
+    }
+    #survisedo{
+        font-size: 18px;
     }
 }
