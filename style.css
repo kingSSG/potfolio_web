@@ -550,7 +550,8 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
        
-        background-image: url(/img/background\ stil.jpg);
+        background-image: none; 
+        background-color: rgb(78, 78, 91);
         height: 944px;
         width: 576px;
     }
