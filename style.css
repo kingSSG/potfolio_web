@@ -550,7 +550,7 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
        
-        background-image: url(/img/pp.jpg); 
+        background-image: url(img/pp.jpg); 
         
         height: 1044px;
         width: 586px;
