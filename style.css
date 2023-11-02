@@ -576,13 +576,15 @@ nav .fa-solid{
     }
     nav ul {
         background: #222020;
-        position: fixed;
-        top: 0;
-        right: -351px;  /*because width is 200 so it willhide  */
+        
+        top: 21px;
+         /*because width is 200 so it willhide  */
         width: 351px;
+        right: -351px;
         height: 48vh;
-        padding-top: 50px;
+        padding-top: 75px;
         z-index: 2;
+        position: fixed;
         transition: right 0.5s;
 
     }
