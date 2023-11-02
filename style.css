@@ -579,8 +579,8 @@ nav .fa-solid{
         
         top: 21px;
          /*because width is 200 so it willhide  */
-        width: 351px;
-        right: -351px;
+        width: 234px;
+        right: -234px;
         height: 48vh;
         padding-top: 75px;
         z-index: 2;
@@ -675,7 +675,7 @@ nav .fa-solid{
         font-size: 16px;
     }
     .fa-solid.fa-bars{
-            padding-left: 261px;
+            padding-left: 449px;
             padding-top: 1px;
     }
     .logo {
@@ -689,5 +689,36 @@ nav .fa-solid{
     #helloworld{
         width: 80%;
         
+    }
+    #experince {
+        padding-top: 39px;
+        padding-left: 1px;
+        padding-right: 101px;
+    }
+    #survises{
+        padding-left: 48px;
+    }
+    .socalicon {
+        margin-top: 32px;
+        padding-left: 9px;
+    }
+    .contact-right form {
+        width: 148%;
+    }
+     #contactid{
+        margin-top: 1px;
+    }
+    .survises-list div {
+        background: rgb(96, 96, 96);
+        height: 400px;
+        width: 350px;
+        padding: 60px;
+        font-size: 13px;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: background 0.5s,transform 0.5s;
+    }
+    #contacth1{
+        font-size: 50px;
     }
 }
