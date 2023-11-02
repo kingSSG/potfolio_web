@@ -347,12 +347,12 @@ html{
 }
 /* -------------progress bar -------------------------------------- */
 
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
+} */
 .progressbody{
     height: 300px;
     display: flex;
@@ -552,16 +552,18 @@ nav .fa-solid{
        
         background-image: url(img/pp.jpg); 
         
-        height: 1044px;
+        height: 1100px;
         width: 586px;
     }
     .headertxt{
         margin-top: 100%;
-        font-size: 25px;
+        font-size: 35px;
         margin-top: 452px;
     }
-    .headertxt h1{
-        font-size: 30px;
+    .headertxt h1 {
+        color: aliceblue;
+        font-size: 50px;
+        margin-top: 20px;
     }
     nav .fa-solid{
         display: block;
@@ -681,7 +683,8 @@ nav .fa-solid{
 
     }
     #helloworld{
-        width: 80%;
+        width: 90%;
+        height: 70px;
         
     }
     #experince {
