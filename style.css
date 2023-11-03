@@ -550,9 +550,9 @@ nav .fa-solid{
 @media only screen and (max-width: 600px){
     #header{
        
-        background-image: url(img/pp.jpg); 
+        background-image: url(img/backmo.jpg); 
         
-        height: 1100px;
+        height: 1165px;
         width: 586px;
     }
     .headertxt{
@@ -572,12 +572,13 @@ nav .fa-solid{
     }
     nav ul {
         background: #222020;
+        border-radius: 4%;
         
         top: 21px;
          /*because width is 200 so it willhide  */
-        width: 234px;
+        width: 200px;
         right: -234px;
-        height: 48vh;
+        height: 62vh;
         padding-top: 75px;
         z-index: 2;
         position: fixed;
@@ -723,5 +724,8 @@ nav .fa-solid{
     }
     #gamiladd{
         margin-left: 1px;
+    }
+    .sidemenulist li{
+        padding-top: 10px;
     }
 }
