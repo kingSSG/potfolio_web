@@ -110,7 +110,9 @@ nav ul li a:hover::after{
     
 }
 .about-c1 img{
-    width: 100%;
+    margin-left: -100px;
+    width: 45ch;
+    height: 65ch;
     border-radius:15px;
     
 
@@ -323,11 +325,7 @@ html{
     padding-top: 40px;
     padding-left: 1px;
 }
-#education
-{   
-    padding-top: 0px;
-    
-}
+
 #educationdetails{
     
     padding: 19px;
@@ -401,11 +399,11 @@ html{
     animation-delay: 0.20s;
 }
 .skill-per.Ccpp{
-    width: 70%;
+    width: 65%;
     animation-delay: 0.10s;
 }
 .skill-per.htmlcssjavascript{
-    width: 60%;
+    width: 75%;
     animation-delay: 0.10s;
 }
 .skill-per.Python{
@@ -540,6 +538,14 @@ html{
     font-weight: 500;
     color: #606060;
 }
+#education{
+    margin-top: -39px;
+    margin-left: -49px;
+}
+#exprience{
+    margin-top: -5px;
+    margin-left: -50px;
+}
 
 /* --------------------------------------cercle----------------------------------- */
 
@@ -548,6 +554,10 @@ nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width: 600px){
+    #education{
+        margin-top: -15px;
+        margin-left: -29px;
+    }
     #header{
        
         background-image: url(img/backmo.jpg); 
@@ -588,6 +598,7 @@ nav .fa-solid{
     nav ul li{
         display: block;
         margin: 25px;
+        margin-left: -10px;
     }
     nav ul .fa-solid{
         position: absolute;
@@ -616,7 +627,7 @@ nav .fa-solid{
         margin-right: 20px;
      }
      #phontext{
-        font-size: 17px;
+        font-size: 16px;
         margin-right: 27px;
      }
     
@@ -652,7 +663,7 @@ nav .fa-solid{
         border-radius: 11px;
       }
       .container {
-        padding: 40px 10%;
+        padding: 42px 5%;
     }
     .cerclebody {
         height: 55%;
@@ -728,4 +739,18 @@ nav .fa-solid{
     .sidemenulist li{
         padding-top: 10px;
     }
+    .about-c1
+    {
+        margin-left: 100px;
+    }
+    .about-c1 img {
+        margin-left: -100px;
+        width: 36ch;
+        height: 48ch;
+        border-radius: 15px;
+    }
+}
+#msg{
+    color: #3bc918;
+    margin-top: -10px;
 }

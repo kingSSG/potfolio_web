@@ -17,7 +17,7 @@
                 <img src="img/ssglogo.gif"  class="logo">
                 
                 <ul  class="sidemenulist" id="sidemenue">
-                    <li><a href="">Home</a></li>
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#survises">Servises</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -59,7 +59,7 @@
                 <div class="tab-contents active-tab" id="skills">
     
                         <!-- ------------------------------------------------ -->
-                        <ul class="footer-nav">
+                        <ul class="footer-nav" id="exprience">
                         
                             <li> <span>Internship under NIC | Jalpaigur</span> 
                                 <p> <br>
@@ -105,17 +105,17 @@
                                         
                                                     <div class="skill-bar">
                                                         <span class="skill-per Ccpp">
-                                                            <span class="tooltip">70%</span>
+                                                            <span class="tooltip">65%</span>
                                                         </span>
                                                     </div>
                                                 </div>
                                                 <div class="skill-box">
-                                                    <span class="title">HTML /CSS / JavaScript</span>
+                                                    <span class="title">HTML/CSS/JavaScript</span>
                                         
                                                     <div class="skill-bar">
                                                         <span class="skill-per htmlcssjavascript">
                                                             <br>
-                                                            <span class="tooltip">60%</span>
+                                                            <span class="tooltip">75%</span>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -233,6 +233,7 @@
             </div>
         </div>
     </div>
+    <br><br>
     <!-- ------------contact --------------------------- -->
     <div id="contact">
         <div class="container">
@@ -240,8 +241,8 @@
                 <div class="contact-left" id="contactid">
                     <br><br>
                     <h1 id="contacth1">Contact me</h1>
-                    <p id="gamiladd"><i class="fa-solid fa-envelope"></i><br> <br>suvojit.sengupta.ssg@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> <br> <br>+91 7001671409</p>
+                    <p id="gamiladd"><i class="fa-solid fa-envelope"></i>suvojit.sengupta.ssg@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 7001671409</p>
                     <div class="socalicon">
                         <a href="https://www.linkedin.com/in/suvojit-sengupta-82115820a/"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/kingSSG"><i class="fa-brands fa-square-github"></i></a>
@@ -251,12 +252,17 @@
                 </div>
                 <div class="contact-right">
                     <form  name="submit-to-google-sheet">
+                        <span id="msg"></span>
                         <input type="text" name="Name" placeholder="name" required>
                         <input type="text" name="Email" placeholder="email" required>
-                        <textarea name="Massage" id="" cols="" rows="6" placeholder="massage"></textarea>
+                        <textarea name="Massage" id="" cols="" rows="6" placeholder="massage"></textarea> 
                         <button type="submit" class="btn btn2"  id="submitForm" >Submit</button>
                     </form>
+                    <br><br>
+                    <span id="msg"></span>
+                    <br><br>
                 </div>
+               
             </div>
         </div>
     </div>
@@ -321,10 +327,18 @@
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzoH_4fykQh33Pr25A1mNvUQwTfVQddAqrkmOhT-Ea9lbei2Gg2QKhOMdfzisQLy_o/exec'
     const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
     form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log( Success()))
+        .then(response => {
+            msg.innerHTML ="Massage send successfully....!!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+
         .catch(error => console.error('Error!', error.message))
     })
     
