@@ -7,9 +7,9 @@
     <link rel="icon" type="gif" href="img/logo.png"/>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/41b8dec3a6.js" crossorigin="anonymous"></script>
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
-<body>
+<body id="mobilebody">
     <div id="header">
         <div class="container">
             <nav>
@@ -38,8 +38,8 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-c1">
-                    <img class="about-img"src="img/pp.jpg" >
+                <div class="about-c1" id="scrolleff">
+                    <img class="about-img" id="scrolling-image" src="img/pp.jpg" alt="Scrolling Image">
                 </div>
                 <div class="about-c2">
                     <h1 class="subText">About me</h1>
@@ -210,7 +210,7 @@
     <div id="survises">
         <div class="container">
             
-            <h1 class="subText">My Services</h1>
+            <h1 class="subText" id="MyServices">My Services</h1>
             <div class="survises-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -363,6 +363,25 @@
         sidemenue.style.right="-351px";
     }
 </script>
+<script >
+    const scrollingImage = document.getElementById('scrolling-image');
+    const lockPosition = 900; // Adjust this value to the desired scroll position where you want to lock the image
+    
+    window.addEventListener('scroll', () => {
+        // Calculate the position of the image based on the scroll position
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        const imagePosition = -20 + scrollPercentage;
+    
+        // Lock the image's position if it reaches the specified position
+        if (window.scrollY >= lockPosition) {
+            scrollingImage.style.left = '20%';
+        } 
+        else {
+            scrollingImage.style.left = `${imagePosition}%`;
+        }
+    });
+    
+    </script>
     
 </body>
 </html>
