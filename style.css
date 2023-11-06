@@ -573,7 +573,7 @@ html{
 nav .fa-solid{
     display: none;
 }
-/* 295x576 my phone */
+/* 295x570 my phone */
 @media only screen and (max-width: 600px){
     #education{
         margin-top: -15px;
@@ -800,10 +800,6 @@ nav .fa-solid{
     }
     #MyServices{
         padding-top: 1ch;
-    }
-    .container {
-        padding-top: 40px;
-        width: 600px;
     }
 }
 
