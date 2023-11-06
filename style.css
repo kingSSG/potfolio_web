@@ -567,12 +567,13 @@ html{
     left: -10%; /* Initial position (off-screen to the left) */
     width: 36ch;
     height: 48ch; /* Adjust the height to match the container's height */
-    transition: left 0.10s;
+    transition: left 0.1s;
 }
 /* --------------------------phone screen------------------------------- */
 nav .fa-solid{
     display: none;
 }
+/* 295x550 my phone */
 @media only screen and (max-width: 600px){
     #education{
         margin-top: -15px;
@@ -791,11 +792,11 @@ nav .fa-solid{
     
     #scrolling-image {
         position: absolute;
-        top: 199vh; /* Adjust the top value to position the image lower */
+        top: 219vh; /* Adjust the top value to position the image lower */
         left: -20%; /* Initial position (off-screen to the left) */
         width: 36ch;
         height: 48ch; /* Adjust the height to match the container's height */
-        transition: left 0.10s;
+        transition: left 0.1s;
     }
     #MyServices{
         padding-top: 1ch;
