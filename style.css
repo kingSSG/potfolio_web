@@ -330,7 +330,7 @@ html{
 #educationdetails{
     
     padding: 19px;
-    font-size: 17px;
+    font-size: 16px;
 }
 .column span{
     
@@ -573,7 +573,7 @@ html{
 nav .fa-solid{
     display: none;
 }
-/* 295x570 my phone */
+/* 316X534 my phone */
 @media only screen and (max-width: 600px){
     #education{
         margin-top: -15px;
@@ -775,12 +775,9 @@ nav .fa-solid{
         margin-top: 4px;
         margin-right: 1000px;
     } */
-    .container {
-        padding-top: 40px;
-        width: 430px;
-    }
+   
     .subText{
-        padding-top: 14ch;
+        padding-top: 17ch;
         font-size: 50px;
     }
     .scrolleff{
@@ -792,14 +789,18 @@ nav .fa-solid{
     
     #scrolling-image {
         position: absolute;
-        top: 219vh; /* Adjust the top value to position the image lower */
+        top: auto;/*176vh;  Adjust the top value to position the image lower */
         left: -20%; /* Initial position (off-screen to the left) */
         width: 36ch;
-        height: 48ch; /* Adjust the height to match the container's height */
+        height: auto; /* Adjust the height to match the container's height */
         transition: left 0.1s;
     }
     #MyServices{
         padding-top: 1ch;
+    }
+    .container {
+        padding-top: 40px;
+        width: 430px;
     }
 }
 

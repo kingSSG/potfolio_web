@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <title>Scrolling Image Effect</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        
-        .scrolleff{
-            position: relative;
-            overflow: hidden;
-            width: 10%;
-            height: 100vh;
-        }
-        
-        #scrolling-image {
-            position: absolute;
-            top: 0;
-            left: -100%; /* Initial position (off-screen to the left) */
-            width: 100%;
-            height: 100%;
-            transition: left 0.5s;
-        }
-        
-       
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Phone Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    #phoneList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .phone {
+      width: 250px;
+      margin: 10px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img id="scrolling-image" src="/img/pp.jpg" alt="Scrolling Image">
-    </div>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <!-- Add more content here -->
-    </div>
- 
+  <header>
+    <h1>Dynamic Phone Web Page</h1>
+  </header>
+
+  <div id="phoneList"></div>
+
+  <script>
+    // Example phone data (you can replace this with your own data)
+    const phones = [
+      { name: 'Phone 1', brand: 'Brand A', price: '$500' },
+      { name: 'Phone 2', brand: 'Brand B', price: '$600' },
+      { name: 'Phone 3', brand: 'Brand C', price: '$700' },
+      // Add more phones as needed
+    ];
+
+    // Function to create and display phones
+    function displayPhones() {
+      const phoneList = document.getElementById('phoneList');
+      phoneList.innerHTML = ''; // Clear existing content
+
+      phones.forEach(phone => {
+        const phoneElement = document.createElement('div');
+        phoneElement.classList.add('phone');
+        phoneElement.innerHTML = `
+          <h2>${phone.name}</h2>
+          <p>${phone.brand}</p>
+          <p>${phone.price}</p>
+        `;
+        phoneList.appendChild(phoneElement);
+      });
+    }
+
+    // Display phones when the page loads
+    window.onload = displayPhones;
+  </script>
 </body>
 </html>

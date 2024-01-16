@@ -6,69 +6,175 @@
     <title>Sugar Calculator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
+            background-color: #cdcaca;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 68vh;
+            flex-direction: column;
         }
+
         h1 {
             color: #333;
+            margin-bottom: 20px;
         }
+
         #calculator {
-            width: 300px;
-            margin: 0 auto;
+            width: 250px;
+            margin: 20px;
             padding: 20px;
-            background-color: #f5f5f5;
+            
+            background-color: #fff;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
         }
+
+        #calculator:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
         label {
             font-weight: bold;
+            color: #555;
         }
+
         input[type="number"] {
-            width: 100%;
+            width: calc(100% - 20px);
             padding: 10px;
-            margin-bottom: 15px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 24px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         #result {
             font-size: 24px;
             font-weight: bold;
+            color: #4caf50;
+            margin-top: 10px;
+            transition: color 0.3s;
         }
+
+        /* Added styling for smaller images */
+        img.teaspoon-image {
+            max-width: 30px;
+            max-height: 30px;
+            margin: 2px; /* Add some margin between images */
+        }
+        img.teaspoon-image2 {
+            padding-top: 4%;
+            max-width: 197px;
+            max-height: 419px;
+            margin: 50px; /* Add some margin between images */
+        }
+        
+        #image-container{
+            
+            background-color: lightgrey;
+            width: 296px;
+            border: 4px solid rgb(255, 255, 255);
+            /* padding: 50px; */
+            padding-top: 6px;
+            margin: -12px;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Sugar Calculator</h1>
     <div id="calculator">
-        <label for="quantity">Enter Quantity (in grams):</label>
+        <label for="wholequantity">Whole Product (in grams/ml):</label>
+        <input type="number" id="wholequantity" min="0">
+        <label for="quantity">Enter Quantity 100/(grams/ml):</label>
         <input type="number" id="quantity" min="0">
-        <br>
         <button onclick="calculateSugar()">Calculate</button>
         <div id="result"></div>
     </div>
 
-    <script>
-        function calculateSugar() {
-            const quantityInput = document.getElementById('quantity');
-            const resultElement = document.getElementById('result');
-            const quantity = parseFloat(quantityInput.value);
-
-            if (isNaN(quantity)) {
-                resultElement.textContent = "Please enter a valid quantity.";
-                resultElement.style.color = 'red';
-                return;
+    <div class="container">
+        <script>
+            function calculateSugar() {
+                const wholequantityInput = document.getElementById('wholequantity');
+                const quantityInput = document.getElementById('quantity');
+                const resultElement = document.getElementById('result');
+                let quantity = parseFloat(quantityInput.value);
+                let wholequantity = parseFloat(wholequantityInput.value);
+    
+                if (isNaN(quantity)) {
+                    resultElement.textContent = "Please enter a valid quantity.";
+                    resultElement.style.color = '#FF0000';
+                    return;
+                }
+    
+                let atogm = (wholequantity * quantity) / 100;
+    
+                // Assuming 1 gram of sugar is approximately 0.2 teaspoons
+                const teaspoons = atogm * 0.2;
+    
+                resultElement.textContent = `${atogm} grams of sugar is approximately ${teaspoons.toFixed(2)} teaspoons.`;
+                resultElement.style.color = '#4caf50';
+                teaspoonimg(teaspoons);
+    
+                // Animation
+                resultElement.style.fontSize = '24px';
+                resultElement.style.transition = 'font-size 0.5s';
+    
+                setTimeout(() => {
+                    resultElement.style.fontSize = 'inherit';
+                }, 500);
             }
-
-            // Assuming 1 gram of sugar is approximately 0.2 teaspoons
-            const teaspoons = quantity * 0.2;
-
-            resultElement.textContent = `${quantity} grams of sugar is approximately ${teaspoons.toFixed(2)} teaspoons.`;
-            resultElement.style.color = 'green';
-
-            // Animation
-            resultElement.style.fontSize = '24px';
-            resultElement.style.transition = 'font-size 0.5s';
-
-            setTimeout(() => {
-                resultElement.style.fontSize = 'inherit';
-            }, 500);
-        }
-    </script>
+    
+            function teaspoonimg(teaspoons) {
+                // Assuming you have an array of image sources
+                const imageFilename = 'img/rename.jpg';
+            
+                // Create and append img elements dynamically
+                const imgContainer = document.getElementById('image-container') || document.createElement('div');
+                imgContainer.id = 'image-container'; // Set or create the container ID
+                imgContainer.innerHTML = ''; // Clear existing content
+            
+                for (let i = 0; i < teaspoons; i++) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imageFilename;
+                    imgElement.alt = 'Teaspoon Image';
+                    imgElement.classList.add('teaspoon-image'); // Add a class for styling
+                    imgContainer.appendChild(imgElement);
+                }
+                
+                const imageFilename2 = 'img/SugarRec-UCM_470043.jpg';
+                const imgElement = document.createElement('img');
+                    imgElement.src = imageFilename2;
+                    //imgElement.alt = 'Teaspoon';
+                    imgElement.classList.add('teaspoon-image2'); // Add a class for styling
+                    imgContainer.appendChild(imgElement);
+            
+                // Append the container to the document
+                document.body.appendChild(imgContainer);
+            }
+            
+        </script>
+    </div>
+    
 </body>
 </html>
